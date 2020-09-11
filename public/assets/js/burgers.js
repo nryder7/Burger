@@ -2,6 +2,7 @@
 $(function() {
   $(".change-devour").on("click", function(event) {
     var id = $(this).data("id");
+    var classUpdate = $(this).attr("class","already-devoured");
   
     var newDevouredState = {
       devoured: 1
@@ -29,14 +30,14 @@ $(function() {
       devoured: 0
     };
 
-    // Send the POST request.
+
     $.ajax("/api/burgers", {
       type: "POST",
       data: newBurger
     }).then(
       function() {
         console.log("new burger added");
-        // Reload the page to get the updated list
+        
         location.reload();
       }
     );

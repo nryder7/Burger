@@ -16,3 +16,7 @@ li {
 .form-group {
   margin-bottom: 5px;
 }
+
+.already-devoured {
+  display:none;
+}
